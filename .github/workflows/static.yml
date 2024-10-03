@@ -1,25 +1,20 @@
-name: Deploy to GitHub Pages
+name: Deploy HTML/CSS site to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch if different
+      - main  # or the branch you want to deploy from
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build  # Adjust this to your build command
+        uses: actions/checkout@v3
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: main  # Branch to deploy to
-          folder: SamenSterk  # Folder to deploy
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./SamenSterk/  # Root directory containing your HTML/CSS files
