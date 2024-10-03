@@ -1,25 +1,14 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (main branch)
 
 on:
   push:
     branches:
-      - main  # Change this to your default branch if different
+      - main  # This triggers the action only on pushes to the main branch
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build  # Adjust this to your build command
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: main  # Branch to deploy to
-          folder: SamenSterk  # Folder to deploy
+        uses: actions/checkout@v3
