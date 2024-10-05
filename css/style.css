@@ -360,9 +360,29 @@ header {
     font-size: 1rem;
 }
 
+.contact-bttn.active {
+    background-color: var(--accentColor1);
+    color: black;
+}
+
+.contact-bttn.active::after {
+    display: none;
+}
+
+.contact-bttn.active:hover {
+    color: black;
+}
+
 .articles sup,
 article sub {
     font-style: normal;
+}
+
+sup>a {
+    color: var(--accentColor2_dark);
+    text-decoration: none;
+    font-family: Noto Sans;
+    padding-left: 3px;
 }
 
 .articles>section>figure>img {
@@ -526,6 +546,7 @@ body>footer {
 
 figcaption {
     position: absolute;
+    font-weight: 200;
     bottom: -1.6rem;
     color: var(--secundaryColor);
 }
@@ -566,7 +587,7 @@ figcaption {
 
 .pageNav>a {
     color: var(--secundaryColor);
-    width: 350px;
+    width: 450px;
     padding: 1rem;
     border-radius: 10px;
     border: 2px solid;
@@ -575,6 +596,10 @@ figcaption {
     display: flex;
     align-items: center;
     transition: 500ms ease color;
+}
+
+.pageNav[data-button-count="4"] a {
+    width: 350px;
 }
 
 .pageTree {
@@ -705,10 +730,6 @@ p {
     margin-left: -2rem;
 }
 
-.inlineVersion li {
-    padding-left: 0em;
-}
-
 .inlineVersion li::before {
     display: none;
     content: '';
@@ -769,4 +790,185 @@ p {
 .IntroductionParagraph p {
     margin-bottom: 0.8rem;
     line-height: 1.5;
+}
+
+p.subHeader {
+    color: var(--paragraphColor);
+    font-weight: bold;
+    font-family: poppins;
+}
+
+ul.symptomenList li {
+    color: var(--paragraphColor);
+}
+
+ul.symptomenList li::before {
+    background-color: var(--secundaryColor);
+    width: 10px;
+    height: 10px;
+    left: 0.1em;
+}
+
+.subCategory {
+    max-width: 90%;
+    left: 10%;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.single-column {
+    grid-template-columns: 1fr;
+    position: relative;
+    padding: 5rem calc(10% + 5em);
+    max-width: 60%;
+    border-radius: 0px 1rem 1rem 0px;
+}
+
+.single-column header {
+    color: var(--paragraphColor);
+    font-family: poppins;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.paragraphs>article>section>p.subHeader {
+    font-weight: 100;
+}
+
+.paragraphs>article>section>p.subHeader:nth-child(3) {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.inlineVersion>ul>li:nth-child(2) {
+    padding-left: 0em;
+}
+
+.contactBody {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contactBody p.subHeader {
+    font-weight: 200;
+}
+
+.contactBody header {
+    font-weight: bold;
+    color: var(--paragraphColor);
+    font-size: 1.2rem;
+}
+
+.contactBody p {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.contactBody>section {
+    padding: 5em;
+}
+
+.contactBody section:nth-child(2) {
+    background-color: #1E2749;
+}
+
+.contactBody>section:nth-child(1) {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    color: var(--paragraphColor);
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    color: var(--paragraphColor);
+}
+
+form input {
+    outline: transparent;
+    width: 80%;
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+    border-radius: 5px;
+}
+
+form input[type="radio"] {
+    width: max-content;
+    margin-bottom: 0.2rem;
+}
+
+label {
+    display: block;
+}
+
+.radioLabel {
+    display: inline;
+    padding-left: 0.2rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+label[for="e-mail"] {
+    margin-top: 1rem;
+}
+
+label>sup {
+    font-weight: 200;
+}
+
+textarea {
+    height: calc(100% - 45px - 2.2rem);
+    width: 100%;
+    display: block;
+    outline: transparent;
+    font-family: Noto sans;
+    resize: none;
+    padding: 0.4rem;
+}
+
+form button {
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    float: right;
+    margin-top: 1rem;
+    color: white;
+    position: relative;
+    transition: 500ms;
+    border: 2px solid var(--secundaryColor);
+    background: none;
+    cursor: pointer;
+}
+
+input[type='radio'] {
+    position: relative;
+    cursor: pointer;
+}
+
+input[type='radio']:checked:after {
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--paragraphColor);
+    box-sizing: border-box;
+    position: absolute;
+    background-color: var(--accentColor1_dark);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+form input:last-child {
+    margin-bottom: 0em;
+}
+
+form button:hover {
+    color: black;
+    background-color: var(--secundaryColor);
 }
