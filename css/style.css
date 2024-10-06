@@ -455,7 +455,8 @@ footer {
 
 .footerHero {
     padding: 1rem 2rem;
-    background-color: lightgray;
+    background-color: var(--primaryColor_light);
+    color: var(--paragraphColor);
     max-width: 80%;
     left: 10%;
     position: relative;
@@ -870,7 +871,7 @@ ul.symptomenList li::before {
 }
 
 .contactBody section:nth-child(2) {
-    background-color: #1E2749;
+    background-color: var(--primaryColor_light);
 }
 
 .contactBody>section:nth-child(1) {
@@ -938,7 +939,7 @@ form button {
     border-radius: 0.5rem;
     float: right;
     margin-top: 1rem;
-    color: white;
+    color: var(--secundaryColor);
     position: relative;
     transition: 500ms;
     border: 2px solid var(--secundaryColor);
