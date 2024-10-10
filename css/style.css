@@ -195,7 +195,9 @@ nav>ul>li>a:not(.active):hover:after {
 }
 
 .contact-bttn {
-    border: 1px solid var(--accentColor1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--accentColor1);
     color: var(--accentColor1);
     padding: 0.5rem 1.5rem;
     transition: 500ms ease-in-out;
@@ -360,6 +362,7 @@ header {
 .articles>section>article>p {
     line-height: 1.8;
     font-size: 1rem;
+    word-spacing: 1px;
 }
 
 .contact-bttn.active {
@@ -478,6 +481,8 @@ footer>footer>p:nth-child(1) {
 
 footer>footer>p:nth-child(2) {
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 footer>header {
@@ -515,6 +520,10 @@ body>footer {
     font-weight: 800;
     color: rgb(190, 190, 190);
     padding-bottom: 1rem;
+}
+
+.footerNav header:first-letter {
+    text-transform: uppercase;
 }
 
 .footerNav>.footerLinks {
@@ -855,17 +864,19 @@ ul.symptomenList li::before {
 
 .contactBody p.subHeader {
     font-weight: 200;
+    text-indent: 1rem;
 }
 
 .contactBody header {
     font-weight: bold;
     color: var(--paragraphColor);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .contactBody p {
     margin-bottom: 0.8rem;
     line-height: 1.5;
+    letter-spacing: 1px;
 }
 
 .contactBody>section {
@@ -873,6 +884,7 @@ ul.symptomenList li::before {
 }
 
 .contactBody section:nth-child(2) {
+    margin-top: 50px;
     background-color: var(--primaryColor_light);
 }
 
@@ -936,7 +948,7 @@ textarea {
     padding: 0.4rem;
 }
 
-form button {
+form input[type="submit"] {
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
     float: right;
@@ -944,9 +956,18 @@ form button {
     color: var(--secundaryColor);
     position: relative;
     transition: 500ms;
+    width: max-content;
     border: 2px solid var(--secundaryColor);
     background: none;
     cursor: pointer;
+}
+
+form legend {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    height: 40px;
+    font-family: Poppins;
+    font-weight: bold;
 }
 
 input[type='radio'] {
@@ -974,4 +995,9 @@ form input:last-child {
 form button:hover {
     color: black;
     background-color: var(--secundaryColor);
+}
+
+form span {
+    display: block;
+    padding-bottom: 2px;
 }

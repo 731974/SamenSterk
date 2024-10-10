@@ -19,11 +19,11 @@
     <header class="heroContainer">
         <img src="img/Eenzaamheid-image.jpg" alt="Hero image" title="Invulling!" class="logo">
         <nav>
-            <a href="/"> <img src="img/favicon.svg" alt="Hero image" title="Invulling!" class="logo">
+            <a href="../"> <img src="img/favicon.svg" alt="Hero image" title="Invulling!" class="logo">
                 <p>Samen Sterk</p>
             </a>
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="../">Home</a></li>
                 <li><a href="oorzaken.html">Oorzaken</a></li>
                 <li><a href="symptomen.html">Symptomen</a></li>
                 <li><a href="oplossingen.html">Hulp</a></li>
@@ -58,20 +58,30 @@
             </article>
         </section>
         <section>
+
             <form>
+
                 <section>
+                    <legend>Contact formulier</legend>
                     <label for="firstName">Voornaam</label>
                     <input name="firstName" required type="text">
                     <label for="surName">Achternaam</label>
                     <input name="surName" required type="text">
                     <label for="salutation">Aanhef</label>
 
-                    <input type="radio" required id="option1" name="group1" value="Option1">
-                    <label class="radioLabel" for="option1">Dhr.</label><br>
-                    <input type="radio" required id="option2" name="group1" value="Option2">
-                    <label class="radioLabel" for="option2">Mvr.</label><br>
-                    <input type="radio" required id="option3" name="group1" value="Option3">
-                    <label class="radioLabel" for="option3">X</label><br>
+                    <span>
+                        <input type="radio" required id="option1" name="group1" value="Option1">
+                        <label class="radioLabel" for="option1">Dhr.</label>
+                    </span>
+                    <span>
+                        <input type="radio" required id="option2" name="group1" value="Option2">
+                        <label class="radioLabel" for="option2">Mvr.</label>
+                   </span>
+                    <span>
+                        <input type="radio" required id="option3" name="group1" value="Option3">
+                        <label class="radioLabel" for="option3">X</label>
+                   </span>
+
 
                     <label for="e-mail">E-mail</label>
                     <input name="e-mail" required type="email">
@@ -81,7 +91,7 @@
                 <section>
                     <label for="message">Telefoonnummer</label>
                     <textarea required name="message" id=""></textarea>
-                    <button>Verstuur</button>
+                    <input type="submit" value="Verstuur">
                 </section>
             </form>
         </section>
