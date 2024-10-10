@@ -32,7 +32,7 @@ h6 {
 
 body {
     background-color: var(--backgroundColor);
-    scroll-behavior: smooth scroll;
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -845,6 +845,7 @@ ul.symptomenList li::before {
 
 .paragraphs>article>section>p.subHeader {
     font-weight: 100;
+    letter-spacing: 1px;
 }
 
 .paragraphs>article>section>p.subHeader:nth-child(3) {
@@ -1000,4 +1001,10 @@ form button:hover {
 form span {
     display: block;
     padding-bottom: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        display: none;
+    }
 }
