@@ -86,6 +86,7 @@ nav>a>img {
 
 header.heroContainer>img {
     width: 100%;
+    display: block;
 }
 
 header.heroContainer {
@@ -1211,5 +1212,20 @@ form span {
     }
     .paragraphs ul>li {
         text-indent: 1.2rem;
+    }
+    .contactBody section:nth-child(2) {
+        margin-top: 30px;
+    }
+    .contactBody {
+        display: block;
+    }
+    .contactBody>section {
+        padding: 2rem;
+    }
+    .contactBody p.subHeader {
+        text-indent: 0;
+    }
+    form {
+        display: block;
     }
 }
