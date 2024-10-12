@@ -886,6 +886,10 @@ ul.symptomenList li::before {
     padding: 5em;
 }
 
+section {
+    overflow-x: hidden;
+}
+
 .contactBody section:nth-child(2) {
     margin-top: 50px;
     background-color: var(--primaryColor_light);
@@ -1010,16 +1014,26 @@ form span {
     z-index: 11;
 }
 
+#menu-toggle {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+        max-width: 100%;
+        position: relative;
+    }
     a.mobileMenu {
         position: absolute;
         bottom: 1rem;
         text-align: center;
         width: 140px;
         text-decoration: none;
+        margin-bottom: 3rem;
     }
     a.active:after {
-        left: -25%;
+        left: -20px;
     }
     body nav>ul>li {
         display: block;
@@ -1070,9 +1084,6 @@ form span {
     #menu-toggle:checked~.menu {
         display: block;
     }
-    #menu-toggle {
-        display: none;
-    }
     #menu-toggle:checked~.menu {
         display: block;
     }
@@ -1086,5 +1097,119 @@ form span {
         padding: 2rem;
         width: 200px;
         padding-top: 5rem;
+    }
+    .articles>section {
+        display: block;
+        padding-bottom: 5rem;
+    }
+    .articles {
+        max-width: 100%;
+        padding: 2em;
+        left: 0;
+    }
+    .articles>section>article>header {
+        margin-top: 3rem;
+    }
+    .pageTree {
+        padding: 0em 0em 2em 0em;
+    }
+    .heroText {
+        padding: 2em 1em;
+        margin-top: 0em;
+    }
+    .heroText>ul {
+        display: flex;
+        flex-flow: wrap;
+        padding-top: 0em;
+        justify-content: center;
+    }
+    footer>header {
+        display: block;
+    }
+    footer>header>section>p {
+        max-width: 100%;
+        padding-bottom: 3rem;
+    }
+    .footerNav {
+        right: 0;
+    }
+    .footerNav>.footerLinks {
+        width: 100%;
+    }
+    .quickNav>header {
+        display: block;
+        padding-right: 0em;
+    }
+    .quickNav>header>article {
+        height: auto;
+        margin-bottom: 2rem;
+        width: 300px;
+    }
+    .quickNav {
+        width: 100px;
+        overflow-x: visible;
+    }
+    .quickNav>header>article>a:before {
+        height: 100%;
+        width: 300px;
+        background-image: linear-gradient(to right, var(--accentColor1_dark) 0%, transparent);
+    }
+    header.heroContainer>section>article {
+        padding: 1em;
+        margin-top: 2rem;
+    }
+    header.heroContainer>section>article>h1 {
+        font-size: 1.5rem;
+    }
+    header.heroContainer>section>article>h2 {
+        font-size: 1rem;
+    }
+    .single-column {
+        max-width: 100%;
+        padding: 3rem;
+        border-radius: 0;
+    }
+    .paragraphs>article {
+        display: block;
+    }
+    .paragraphs {
+        max-width: 100%;
+        left: 0;
+        padding: 2rem;
+    }
+    .paragraphs header {
+        margin-top: 2rem;
+    }
+    .paragraphs P {
+        max-width: 100%;
+        letter-spacing: 0.2px;
+    }
+    .inlineVersion {
+        padding: 0;
+        margin: 0;
+        float: left;
+    }
+    .paragraphs ul>li {
+        padding-left: 0em;
+    }
+    .sources {
+        max-width: 90%;
+        padding: 1em 2em;
+        margin-top: -5rem;
+        left: 5%;
+    }
+    .footerText>ul {
+        padding-top: 1rem;
+        padding-bottom: 0em;
+    }
+    .paragraphs ul>li>b {
+        text-indent: 1.8rem;
+    }
+    .IntroductionParagraph {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .paragraphs ul>li {
+        text-indent: 1.2rem;
     }
 }
