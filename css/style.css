@@ -1,7 +1,7 @@
 /* CCS kleuren variablen en google import for Noto Sans (Paragraph) en Poppins (headers) */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
- :root {
+:root {
     --backgroundColor: #0B1021;
     --paragraphColor: #FAFAFF;
     --secundaryColor: #E4D9FF;
@@ -18,7 +18,13 @@
     margin: 0;
     box-sizing: border-box;
     border: 0;
-    font-family: Noto sans;
+    font-family: "Noto sans";
+}
+
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
 }
 
 h1,
@@ -146,8 +152,9 @@ header.heroContainer>section>article:after {
     background-color: rgba(29, 29, 29, 0.7);
 }
 
-header.heroContainer>section>article>h1 {
+header.heroContainer>section>article>.bigTitle {
     font-size: 3rem;
+    font-family: poppins;
     color: var(--paragraphColor);
     font-weight: 800;
 }
@@ -212,7 +219,7 @@ nav>ul>li>a:not(.active):hover:after {
     color: black;
 }
 
-.quickNav>header>article>a>header {
+.quickNav>header>article>a>h4 {
     height: 300px;
     width: 100%;
     top: 0;
@@ -224,11 +231,15 @@ nav>ul>li>a:not(.active):hover:after {
     padding-left: 1rem;
 }
 
+.hidden {
+    display: none;
+}
+
 figcaption>b {
     padding-right: 0.3rem;
 }
 
-.quickNav>header>article>a>header:after {
+.quickNav>header>article>a>h4:after {
     content: '';
     height: 5px;
     top: 1.3rem;
@@ -389,7 +400,7 @@ article sub {
 sup>a {
     color: var(--accentColor2_dark);
     text-decoration: none;
-    font-family: Noto Sans;
+    font-family: "Noto Sans";
     padding-left: 3px;
 }
 
@@ -469,26 +480,33 @@ footer {
     left: 10%;
     position: relative;
     border-radius: 1rem;
+    display: grid;
+    justify-content: center;
     margin-top: 3rem;
 }
 
-footer>footer {
+footer>section:nth-child(3) {
+    display: grid;
+    justify-content: center;
+}
+
+footer>section {
     color: white;
     padding: 2rem 0rem;
     font-weight: 100;
 }
 
-footer>footer>p:nth-child(1) {
+footer>section>p:nth-child(1) {
     padding-bottom: 0.7rem;
 }
 
-footer>footer>p:nth-child(2) {
+footer>section>p:nth-child(2) {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-footer>header {
+footer>section {
     display: flex;
     max-width: 80%;
     left: 10%;
@@ -501,31 +519,38 @@ footer img {
     aspect-ratio: 1;
 }
 
-footer>header>section>p {
+footer>section>section>p {
     max-width: 50%;
-    color: rgb(208, 208, 208);
+    color: var(--paragraphColor);
     line-height: 1.5;
     text-align: left;
 }
 
-footer>header>section>img {
+footer>section>h5 {
+    font-weight: normal;
+    padding-bottom: 1rem;
+}
+
+footer>section>section>img {
     display: grid;
     margin-bottom: 1rem;
 }
 
 body>footer {
     padding: 5rem 2rem 0rem 2rem;
+    z-index: 10000;
+    position: relative;
 }
 
-.footerNav header {
+.footerNav h3 {
     text-align: left;
     font-size: 1.2rem;
     font-weight: 800;
-    color: rgb(190, 190, 190);
+    color: var(--paragraphColor);
     padding-bottom: 1rem;
 }
 
-.footerNav header:first-letter {
+.footerNav h3:first-letter {
     text-transform: uppercase;
 }
 
@@ -557,6 +582,19 @@ body>footer {
     text-decoration: none;
     position: relative;
     transition: 500ms;
+    font-weight: 300;
+}
+
+.footerHero>h5 {
+    display: grid;
+    font-size: 1rem;
+    font-weight: 200;
+    padding-bottom: 0em;
+    gap: 0.5rem;
+}
+
+.footerHero>h5>b {
+    font-size: 1.2rem;
 }
 
 figcaption {
@@ -654,7 +692,7 @@ figcaption {
     color: var(--accentColor1_dark);
 }
 
-.pageNav header {
+.pageNav h2 {
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -871,7 +909,7 @@ ul.symptomenList li::before {
     text-indent: 1rem;
 }
 
-.contactBody header {
+.contactBody h2 {
     font-weight: bold;
     color: var(--paragraphColor);
     font-size: 1.5rem;
@@ -887,12 +925,7 @@ ul.symptomenList li::before {
     padding: 5em;
 }
 
-section {
-    overflow-x: hidden;
-}
-
 .contactBody section:nth-child(2) {
-    margin-top: 50px;
     background-color: var(--primaryColor_light);
 }
 
@@ -1009,7 +1042,7 @@ textarea {
     width: 100%;
     display: block;
     outline: transparent;
-    font-family: Noto sans;
+    font-family: "Noto sans";
     resize: none;
     padding: 0.4rem;
 }
@@ -1028,7 +1061,7 @@ form input[type="submit"] {
     cursor: pointer;
 }
 
-form legend {
+form h2 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
     height: 40px;
@@ -1077,11 +1110,23 @@ form span {
     display: none;
 }
 
+#salutationAanhef {
+    font-weight: bold;
+    letter-spacing: normal;
+    margin-bottom: 0;
+}
+
+label[for="email"] {
+    padding-top: 1rem;
+}
+
+#noBackground {
+    background-color: transparent;
+}
+
 @media screen and (max-width: 768px) {
-    html {
+    section {
         overflow-x: hidden;
-        max-width: 100%;
-        position: relative;
     }
     a.mobileMenu {
         position: absolute;
@@ -1182,10 +1227,10 @@ form span {
         padding-top: 0em;
         justify-content: center;
     }
-    footer>header {
+    footer>section {
         display: block;
     }
-    footer>header>section>p {
+    footer>section>section>p {
         max-width: 100%;
         padding-bottom: 3rem;
     }
@@ -1217,7 +1262,7 @@ form span {
         padding: 1em;
         margin-top: 2rem;
     }
-    header.heroContainer>section>article>h1 {
+    header.heroContainer>section>article>.bigTitle {
         font-size: 1.5rem;
     }
     header.heroContainer>section>article>h2 {
