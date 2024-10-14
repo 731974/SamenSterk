@@ -1,0 +1,5 @@
+Student name: Mathijs van der Klein
+Student number: 731974
+Student class: INFVT1a
+GitHub Repository: https://github.com/731974/SamenSterk
+GitHub Pages URL: https://731974.github.io/SamenSterk/
