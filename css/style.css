@@ -1,6 +1,9 @@
 /* CCS kleuren variablen en google import for Noto Sans (Paragraph) en Poppins (headers) */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*No used anymore because of the jigsaw.w3.org validator, */
+
 :root {
     --backgroundColor: #0B1021;
     --paragraphColor: #FAFAFF;
@@ -37,7 +40,7 @@ h6 {
 }
 
 body {
-    background-color: var(--backgroundColor);
+    background-color: #0B1021;
     scroll-behavior: smooth;
 }
 
@@ -66,7 +69,7 @@ nav>a {
     padding: 0.5em 1.5rem;
     position: relative;
     text-decoration: none;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 nav>a {
@@ -74,7 +77,7 @@ nav>a {
 }
 
 nav>a>p {
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     display: flex;
     font-size: 1.3rem;
     position: absolute;
@@ -91,23 +94,25 @@ nav>a>img {
 }
 
 header.heroContainer>img {
-    width: 100%;
     display: block;
+    margin: auto;
+    max-width: 100%;
 }
 
 header.heroContainer {
     position: relative;
+    background-color: black;
     max-height: 100vh;
     overflow: hidden;
 }
 
 a.active {
     position: relative;
-    color: var(--accentColor1);
+    color: #FF784F;
 }
 
 a.active:hover {
-    color: var(--accentColor1);
+    color: #FF784F;
 }
 
 a.active:after {
@@ -117,7 +122,7 @@ a.active:after {
     position: absolute;
     content: "";
     height: 10px;
-    background-color: var(--accentColor1_dark);
+    background-color: #fd501b;
     width: 10px;
 }
 
@@ -155,18 +160,18 @@ header.heroContainer>section>article:after {
 header.heroContainer>section>article>.bigTitle {
     font-size: 3rem;
     font-family: poppins;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     font-weight: 800;
 }
 
 header.heroContainer>section>article>h2 {
     font-size: 1.5rem;
     font-weight: 200;
-    color: var(--accentColor1);
+    color: #FF784F;
 }
 
 .quickNav {
-    background-color: var(--accentColor1_dark);
+    background-color: #fd501b;
     display: flex;
     z-index: 0;
     position: relative;
@@ -184,7 +189,7 @@ header.heroContainer>section>article>h2 {
 }
 
 nav>ul>li>a:hover {
-    color: var(--accentColor1);
+    color: #FF784F;
 }
 
 nav>ul>li>a:not(.active):after {
@@ -195,7 +200,7 @@ nav>ul>li>a:not(.active):after {
     width: 10px;
     transition: 600ms ease opacity;
     border-radius: 50%;
-    background-color: var(--accentColor1_dark);
+    background-color: #fd501b;
     position: absolute;
     opacity: 0;
 }
@@ -207,15 +212,15 @@ nav>ul>li>a:not(.active):hover:after {
 .contact-bttn {
     border-width: 1px;
     border-style: solid;
-    border-color: var(--accentColor1);
-    color: var(--accentColor1);
+    border-color: #FF784F;
+    color: #FF784F;
     padding: 0.5rem 1.5rem;
     transition: 500ms ease-in-out;
     border-radius: 5px;
 }
 
 .contact-bttn:hover {
-    background-color: var(--accentColor1);
+    background-color: #FF784F;
     color: black;
 }
 
@@ -226,7 +231,7 @@ nav>ul>li>a:not(.active):hover:after {
     font-size: 1.75rem;
     display: flex;
     position: absolute;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     z-index: 1;
     padding-left: 1rem;
 }
@@ -244,7 +249,7 @@ figcaption>b {
     height: 5px;
     top: 1.3rem;
     width: 5px;
-    background-color: var(--paragraphColor);
+    background-color: #FAFAFF;
     position: absolute;
     left: -1%;
 }
@@ -293,7 +298,7 @@ figcaption>b {
     width: calc(100% + 4px);
     z-index: 1;
     position: absolute;
-    background-image: linear-gradient(to bottom, var(--accentColor1_dark) 0%, transparent);
+    background-image: linear-gradient(to bottom, #fd501b 0%, transparent);
     top: -1px;
     left: -1px;
 }
@@ -309,7 +314,7 @@ figcaption>b {
     padding: 5rem;
     text-align: center;
     margin-top: 16em;
-    background-color: var(--primaryColor_light);
+    background-color: #171f3d;
 }
 
 header {
@@ -319,7 +324,7 @@ header {
 .heroText>header {
     font-size: 2rem;
     font-family: Poppins;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     font-weight: 800;
 }
 
@@ -331,7 +336,7 @@ header {
 
 .heroText.footerText {
     margin-top: 0em;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 .articles>section>article {
@@ -362,7 +367,7 @@ header {
 .articles>section>article>header {
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 .articles .subHeader {
@@ -382,7 +387,7 @@ header {
 }
 
 .contact-bttn.active {
-    background-color: var(--accentColor1);
+    background-color: #FF784F;
     color: black;
 }
 
@@ -400,7 +405,7 @@ article sub {
 }
 
 sup>a {
-    color: var(--accentColor2_dark);
+    color: #ffff00;
     text-decoration: none;
     font-family: "Noto Sans";
     padding-left: 3px;
@@ -409,31 +414,35 @@ sup>a {
 .articles>section>figure>img {
     display: block;
     max-width: 100%;
-    border: 3px solid var(--accentColor1);
+    border: 3px solid #FF784F;
     border-bottom-left-radius: 0em;
 }
 
 .articles>section>figure>a {
-    border: 2px solid var(--secundaryColor);
-    right: 0.7rem;
-    color: var(--secundaryColor);
+    border: 2px solid #FF784F;
+    right: 0rem;
+    background-color: #FF784F;
     cursor: pointer;
     text-decoration: none;
-    bottom: 0.7rem;
+    bottom: 0rem;
     position: absolute;
+    color: #0B1021;
     width: max-content;
     padding: 0.5rem 1rem;
-    border-radius: 0.4rem;
+    border-radius: 0;
+    border-top-left-radius: 0.4rem;
     transition: 500ms ease;
 }
 
 .articles>section>figure>a:hover {
-    background-color: var(--secundaryColor);
+    background-color: #FAFAFF;
     color: black;
 }
 
 .articles>section:nth-child(2n)>figure>a {
-    left: 0.7rem;
+    left: 0rem;
+    border-radius: 0;
+    border-top-right-radius: 0.4rem;
 }
 
 .articles>section>figure {
@@ -452,16 +461,16 @@ sup>a {
 }
 
 .heroText>ul>li>a {
-    background-color: var(--accentColor1_dark);
+    background-color: #fd501b;
     color: white;
     text-decoration: none;
-    border: 1px solid var(--accentColor1_dark);
+    border: 1px solid #fd501b;
     padding: 0.5rem 1.2rem;
     border-radius: 0.5rem;
 }
 
 .heroText>ul>li:first-child>a {
-    color: var(--accentColor1_dark);
+    color: #fd501b;
     background-color: transparent;
     text-decoration: none;
     border: 1px solid;
@@ -470,14 +479,14 @@ sup>a {
 }
 
 footer {
-    background-color: var(--primaryColor_default);
+    background-color: #1E2749;
     text-align: center;
 }
 
 .footerHero {
     padding: 1rem 2rem;
-    background-color: var(--primaryColor_light);
-    color: var(--paragraphColor);
+    background-color: #171f3d;
+    color: #FAFAFF;
     max-width: 80%;
     left: 10%;
     position: relative;
@@ -523,7 +532,7 @@ footer img {
 
 footer>section>section>p {
     max-width: 50%;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     line-height: 1.5;
     text-align: left;
 }
@@ -548,7 +557,7 @@ body>footer {
     text-align: left;
     font-size: 1.2rem;
     font-weight: 800;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     padding-bottom: 1rem;
 }
 
@@ -604,11 +613,11 @@ figcaption {
     position: absolute;
     font-weight: 200;
     padding-top: 0.5rem;
-    color: var(--secundaryColor);
+    color: #E4D9FF;
 }
 
 .footerLinks>ul>li>a:hover {
-    color: var(--accentColor1);
+    color: #FF784F;
 }
 
 .footerLinks>ul>li>a:after {
@@ -619,7 +628,7 @@ figcaption {
     width: 10px;
     transition: 600ms ease opacity;
     border-radius: 50%;
-    background-color: var(--accentColor1_dark);
+    background-color: #fd501b;
     position: absolute;
     opacity: 0;
 }
@@ -638,11 +647,11 @@ figcaption {
     padding: 5em 0em;
     position: relative;
     row-gap: 1rem;
-    border-bottom: 2px solid var(--paragraphColor);
+    border-bottom: 2px solid #FAFAFF;
 }
 
 .pageNav>a {
-    color: var(--secundaryColor);
+    color: #E4D9FF;
     width: 450px;
     padding: 1rem;
     border-radius: 10px;
@@ -670,7 +679,7 @@ figcaption {
 }
 
 .pageTree>a {
-    color: var(--secundaryColor);
+    color: #E4D9FF;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -679,20 +688,20 @@ figcaption {
 }
 
 .pageTree>a:hover {
-    color: var(--accentColor1_dark);
+    color: #fd501b;
 }
 
 .pageNav p {
     transition: 500ms ease color;
-    color: var(--secundaryColor);
+    color: #E4D9FF;
 }
 
 .pageNav>a:hover {
-    color: var(--accentColor1_dark);
+    color: #fd501b;
 }
 
 .pageNav>a:hover p {
-    color: var(--accentColor1_dark);
+    color: #fd501b;
 }
 
 .pageNav h2 {
@@ -701,7 +710,7 @@ figcaption {
 }
 
 p {
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 .paragraphs figcaption {
@@ -731,7 +740,7 @@ p {
 .paragraphs header {
     font-weight: bold;
     font-size: 1.5rem;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 .paragraphs .subHeader {
@@ -752,7 +761,7 @@ p {
 
 .paragraphs ul {
     list-style-type: none;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 .paragraphs ul>li {
@@ -767,7 +776,7 @@ p {
     height: 15px;
     top: 8px;
     width: 15px;
-    background-color: var(--accentColor1_dark);
+    background-color: #fd501b;
     position: absolute;
     left: 0rem;
 }
@@ -775,7 +784,7 @@ p {
 .paragraphs ul>li>b {
     display: block;
     padding-bottom: 0.3rem;
-    color: var(--accentColor1);
+    color: #FF784F;
     font-size: 1.2rem;
 }
 
@@ -795,7 +804,7 @@ p {
     max-width: 60%;
     left: 20%;
     position: relative;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     padding: 2rem 3rem;
     border: 1px solid;
     margin-bottom: 2rem;
@@ -812,7 +821,7 @@ p {
     position: relative;
     padding-left: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 .sources p {
@@ -824,7 +833,7 @@ p {
     height: 10px;
     top: 7px;
     width: 10px;
-    background-color: var(--secundaryColor);
+    background-color: #E4D9FF;
     position: absolute;
     left: 0rem;
     border-radius: 50%;
@@ -839,7 +848,7 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     padding: 3em 15%;
-    background-color: var(--primaryColor_light);
+    background-color: #171f3d;
     position: relative;
 }
 
@@ -849,17 +858,17 @@ p {
 }
 
 p.subHeader {
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     font-weight: 200;
     font-family: poppins;
 }
 
 ul.symptomenList li {
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 ul.symptomenList li::before {
-    background-color: var(--secundaryColor);
+    background-color: #E4D9FF;
     width: 10px;
     height: 10px;
     left: 0.1em;
@@ -881,7 +890,7 @@ ul.symptomenList li::before {
 }
 
 .single-column header {
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     font-family: poppins;
     font-weight: 800;
     font-size: 1.2rem;
@@ -910,19 +919,23 @@ ul.symptomenList li::before {
 
 .contactBody p.subHeader {
     font-weight: 200;
-    text-indent: 1rem;
+}
+
+.flexBox {
+    display: flex;
+    align-items: center;
 }
 
 .contactBody h2 {
     font-weight: bold;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
     font-size: 1.5rem;
 }
 
 .contactBody p {
     margin-bottom: 0.8rem;
     line-height: 1.5;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 
 .contactBody>section {
@@ -930,7 +943,7 @@ ul.symptomenList li::before {
 }
 
 .contactBody section:nth-child(2) {
-    background-color: var(--primaryColor_light);
+    background-color: #171f3d;
 }
 
 .contactBody>section:nth-child(1) {
@@ -942,13 +955,13 @@ form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 form label {
     font-weight: bold;
     margin-bottom: 0.2rem;
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 form input {
@@ -981,14 +994,14 @@ nav>label {
     right: 1rem;
     z-index: 9999;
     padding: 1rem;
-    background-color: var(--primaryColor_default);
-    color: var(--paragraphColor);
+    background-color: #1E2749;
+    color: #FAFAFF;
     width: 400px;
     border-radius: 1rem;
 }
 
 .CookieMessage p {
-    color: var(--paragraphColor);
+    color: #FAFAFF;
 }
 
 .CookieMessage header {
@@ -1011,8 +1024,8 @@ nav>label {
 }
 
 .CookieMessage label:hover {
-    background-color: var(--paragraphColor);
-    color: var(--backgroundColor);
+    background-color: #FAFAFF;
+    color: #0B1021;
 }
 
 .CookieCheckbox:checked~.CookieMessage {
@@ -1056,11 +1069,11 @@ form input[type="submit"] {
     border-radius: 0.5rem;
     float: right;
     margin-top: 1rem;
-    color: var(--secundaryColor);
+    color: #E4D9FF;
     position: relative;
     transition: 500ms;
     width: max-content;
-    border: 2px solid var(--secundaryColor);
+    border: 2px solid #E4D9FF;
     background: none;
     cursor: pointer;
 }
@@ -1082,10 +1095,10 @@ input[type='radio']:checked:after {
     border-radius: 15px;
     height: 100%;
     width: 100%;
-    border: 1px solid var(--paragraphColor);
+    border: 1px solid #FAFAFF;
     box-sizing: border-box;
     position: absolute;
-    background-color: var(--accentColor1_dark);
+    background-color: #fd501b;
     content: '';
     display: inline-block;
     visibility: visible;
@@ -1097,7 +1110,7 @@ form input:last-child {
 
 form button:hover {
     color: black;
-    background-color: var(--secundaryColor);
+    background-color: #E4D9FF;
 }
 
 form span {
@@ -1173,7 +1186,7 @@ label[for="email"] {
         left: 0;
         right: 0;
         height: 3px;
-        background-color: var(--accentColor1);
+        background-color: #FF784F;
     }
     .hamburger span:nth-child(1) {
         top: 0;
@@ -1201,7 +1214,7 @@ label[for="email"] {
         right: 0;
         top: 0;
         height: 100vh;
-        background-color: var(--primaryColor_light);
+        background-color: #171f3d;
         padding: 2rem;
         width: 200px;
         padding-top: 5rem;
@@ -1260,7 +1273,7 @@ label[for="email"] {
     .quickNav>header>article>a:before {
         height: 100%;
         width: 300px;
-        background-image: linear-gradient(to right, var(--accentColor1_dark) 0%, transparent);
+        background-image: linear-gradient(to right, #fd501b 0%, transparent);
     }
     header.heroContainer>section>article {
         padding: 1em;
