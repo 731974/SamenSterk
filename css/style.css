@@ -154,7 +154,7 @@ header.heroContainer>section>article:after {
     border-radius: 10px;
     z-index: -1;
     position: absolute;
-    background-color: rgba(29, 29, 29, 0.7);
+    background-color: rgba(29, 29, 29, 0.8);
 }
 
 header.heroContainer>section>article>.bigTitle {
@@ -205,8 +205,22 @@ nav>ul>li>a:not(.active):after {
     opacity: 0;
 }
 
-nav>ul>li>a:not(.active):hover:after {
+nav>ul>li>a:not(.active):not(.contact-bttn):hover:after {
     opacity: 1;
+}
+
+table tr:nth-child(1n) {
+    background-color: #CFF;
+    color: #FAFAFF;
+}
+
+table th {
+    background-color: #0B1021;
+}
+
+table tr:nth-child(2n) {
+    background-color: #FFF;
+    color: #0B1021;
 }
 
 .contact-bttn {
@@ -235,6 +249,9 @@ nav>ul>li>a:not(.active):hover:after {
     z-index: 1;
     padding-left: 1rem;
 }
+
+
+/* Class wordt gebruikt om onderdelen te verbergen die nodig zijn voor de validator.w3.org, niet weghalen */
 
 .hidden {
     display: none;
@@ -272,10 +289,6 @@ figcaption>b {
     opacity: 1;
 }
 
-.quickNav>header>article>a>header:hover img {
-    border: 1px solid red
-}
-
 .quickNav>header>article {
     position: relative;
     height: 50px;
@@ -286,10 +299,6 @@ figcaption>b {
     border-radius: 10px;
     width: 100%;
     height: 300px;
-}
-
-.quickNav>header>article>a>img:hover {
-    border: 2px solid red;
 }
 
 .quickNav>header>article>a:before {
@@ -467,6 +476,13 @@ sup>a {
     border: 1px solid #fd501b;
     padding: 0.5rem 1.2rem;
     border-radius: 0.5rem;
+    transition: 500ms;
+}
+
+.heroText>ul>li>a:hover {
+    background: transparent;
+    color: #FAFAFF;
+    border-color: #FAFAFF;
 }
 
 .heroText>ul>li:first-child>a {
@@ -474,8 +490,14 @@ sup>a {
     background-color: transparent;
     text-decoration: none;
     border: 1px solid;
+    transition: 500ms;
     padding: 0.5rem 1.2rem;
     border-radius: 0.5rem;
+}
+
+.heroText>ul>li:first-child>a:hover {
+    background-color: #FAFAFF;
+    color: #0B1021;
 }
 
 footer {
@@ -661,6 +683,10 @@ figcaption {
     display: flex;
     align-items: center;
     transition: 500ms ease color;
+}
+
+.pageNav>a:active {
+    color: #fd501b;
 }
 
 .pageNav[data-button-count="4"] a {
@@ -940,6 +966,7 @@ ul.symptomenList li::before {
 
 .contactBody>section {
     padding: 5em;
+    background-color: #121b36;
 }
 
 .contactBody section:nth-child(2) {
