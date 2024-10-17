@@ -423,6 +423,7 @@ sup>a {
 .articles>section>figure>img {
     display: block;
     max-width: 100%;
+    width: 100%;
     border: 3px solid #FF784F;
     border-bottom-left-radius: 0em;
 }
