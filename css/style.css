@@ -154,7 +154,7 @@ header.heroContainer>section>article:after {
     border-radius: 10px;
     z-index: -1;
     position: absolute;
-    background-color: rgba(29, 29, 29, 0.8);
+    background-color: rgba(29, 29, 29, 0.9);
 }
 
 header.heroContainer>section>article>.bigTitle {
@@ -167,7 +167,7 @@ header.heroContainer>section>article>.bigTitle {
 header.heroContainer>section>article>h2 {
     font-size: 1.5rem;
     font-weight: 200;
-    color: #FF784F;
+    color: #FFFF00;
 }
 
 .quickNav {
@@ -634,7 +634,7 @@ body>footer {
 figcaption {
     line-height: 1.5;
     position: absolute;
-    font-weight: 200;
+    font-weight: 300;
     padding-top: 0.5rem;
     color: #E4D9FF;
 }
@@ -838,15 +838,28 @@ p {
     border-radius: 10px;
 }
 
-.sources header {
-    font-size: 1.3rem;
+.sources h2 {
+    font-size: 1.5rem;
     padding-bottom: 0.5rem;
     font-weight: 800;
+}
+
+.sources>p>a:hover {
+    color: #FF784F;
+}
+
+.sources h4 {
+    padding: 1rem 0em;
+}
+
+.sources a:link {
+    color: #CFF;
 }
 
 .sources a {
     position: relative;
     padding-left: 1.5rem;
+    transition: 500ms;
     margin-bottom: 1rem;
     color: #FAFAFF;
 }
@@ -924,8 +937,11 @@ ul.symptomenList li::before {
 }
 
 .paragraphs>article>section>p.subHeader {
-    font-weight: 100;
+    font-weight: normal;
+    font-weight: 1.5rem;
+    color: #E4D9FF;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .paragraphs>article>section>p.subHeader:nth-child(3) {
@@ -972,6 +988,22 @@ ul.symptomenList li::before {
 
 .contactBody section:nth-child(2) {
     background-color: #171f3d;
+    position: relative;
+}
+
+.contactBody section:nth-child(2)>a {
+    position: absolute;
+    bottom: 5em;
+    display: flex;
+    transition: 500ms;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none;
+    color: #E4D9FF;
+}
+
+.contactBody section:nth-child(2)>a:hover {
+    color: #fd501b;
 }
 
 .contactBody>section:nth-child(1) {
@@ -1092,18 +1124,27 @@ textarea {
     padding: 0.4rem;
 }
 
-form input[type="submit"] {
+#submitBttn {
+    display: none;
+}
+
+form label[for="submitBttn"] {
     padding: 0.5rem 2rem;
     border-radius: 0.5rem;
     float: right;
     margin-top: 1rem;
-    color: #E4D9FF;
+    color: #fd501b;
     position: relative;
     transition: 500ms;
     width: max-content;
-    border: 2px solid #E4D9FF;
+    border: 2px solid #fd501b;
     background: none;
     cursor: pointer;
+}
+
+form label[for="submitBttn"]:hover {
+    background-color: #fd501b;
+    color: #0B1021;
 }
 
 form h2 {
@@ -1112,6 +1153,40 @@ form h2 {
     height: 40px;
     font-family: Poppins;
     font-weight: bold;
+}
+
+#messageSend {
+    padding: 5em;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    height: 300px;
+}
+
+#messageSend p {
+    line-height: 1.5;
+    color: #00bfa5;
+}
+
+#messageSend a {
+    padding: 0.5rem 1.2rem;
+    transition: 500ms;
+    margin-top: 2rem;
+    color: #fd501b;
+    text-decoration: none;
+    border: 2px solid;
+}
+
+#messageSend a:hover {
+    background-color: #fd501b;
+    border: 2px solid;
+    color: #0B1021;
+}
+
+#messageSend h2 {
+    font-size: 2em;
+    color: #00bfa5;
 }
 
 input[type='radio'] {
