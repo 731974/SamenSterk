@@ -1466,9 +1466,6 @@ label[for="email"] {
 }
 
 @media screen and ( max-width: 1200px) {
-    section {
-        overflow-x: hidden;
-    }
     a.mobileMenu {
         position: absolute;
         bottom: 1rem;
